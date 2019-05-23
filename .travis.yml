@@ -1,0 +1,17 @@
+language: cpp
+dist: xenial
+compiler: gcc
+
+# Boost
+addons: 
+  apt: 
+    packages: libboost-all-dev
+
+install: 
+  # GraphViz
+  - sudo apt-get install -qq graphviz
+
+script: 
+  - qmake
+  - make
+  - ./travis_qmake_gcc_cpp17_boost_graph
