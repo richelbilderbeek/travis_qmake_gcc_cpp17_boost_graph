@@ -2,12 +2,10 @@ language: cpp
 dist: bionic
 compiler: gcc
 
-# Boost
-addons: 
-  apt: 
-    packages: libboost-all-dev
-
 install: 
+  - sudo apt update -qq
+  # Boost
+  - sudo apt install -qq libboost-all-dev
   # GraphViz
   - sudo apt-get install -qq graphviz
 
